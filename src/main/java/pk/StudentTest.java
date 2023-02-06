@@ -58,7 +58,8 @@ public class StudentTest
                 for(int i=0; i<l.size(); i++){
                     z.append("\n"+(i+1)+". Name: "+l.get(i).name+", Age: "+l.get(i).age+", GPA: "+l.get(i).gpa+"\n");
                 }
-                LOGGER.info(z.toString());
+                String z1 = ""+z;
+                LOGGER.info(z1);
             }
             else if(m == 3){
                 n=1;
