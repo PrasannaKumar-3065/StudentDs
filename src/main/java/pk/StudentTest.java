@@ -7,7 +7,6 @@ class Student{
     int age;
     Double gpa;
 
-
     Double getGpa(){
         return this.gpa;
     }
@@ -45,13 +44,19 @@ public class StudentTest
                 int age = sc.nextInt();
                 LOGGER.info("Enter GPA of the Student: ");
                 Double gpa = sc.nextDouble();
-                l.add(new Student(s, age, gpa));
-                LOGGER.info("Student Added Sucessfully");
-                Collections.sort(l, new Comparator<Student>(){
-                    public int compare(Student s1, Student s2) {
-                        return Double.compare(s2.getGpa(),s1.getGpa());
-                    }
-                });
+                if(gpa <= 10 && gpa >= 0){
+                    l.add(new Student(s, age, gpa));
+                    LOGGER.info("Student Added Sucessfully");
+                    Collections.sort(l, new Comparator<Student>(){
+                        public int compare(Student s1, Student s2) {
+                            return Double.compare(s2.getGpa(),s1.getGpa());
+                        }
+                    });
+                }
+                else{
+                    LOGGER.info("Enter GPA 1 to 10");
+                }
+                
             }
             else if(m == 2){
                 StringBuilder z = new StringBuilder("");
