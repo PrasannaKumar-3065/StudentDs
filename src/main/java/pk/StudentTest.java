@@ -54,11 +54,11 @@ public class StudentTest
                 });
             }
             else if(m == 2){
-                String z = "";
+                StringBuilder z = new StringBuilder("");
                 for(int i=0; i<l.size(); i++){
-                    z += "\n"+(i+1)+". Name: "+l.get(i).name+", Age: "+l.get(i).age+", GPA: "+l.get(i).gpa+"\n";
+                    z.append("\n"+(i+1)+". Name: "+l.get(i).name+", Age: "+l.get(i).age+", GPA: "+l.get(i).gpa+"\n");
                 }
-                LOGGER.info(z);
+                LOGGER.info(z.toString());
             }
             else if(m == 3){
                 n=1;
