@@ -63,9 +63,6 @@ public class StudentTest
             else if(m == 3){
                 n=1;
             }
-            else{
-                continue;
-            }
         }while(n == 0);
     }
 }
