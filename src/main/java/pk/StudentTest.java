@@ -2,29 +2,6 @@ package pk;
 import java.util.*;
 import java.util.logging.*;
 
-class Student{
-    String name;
-    int age;
-    Double gpa;
-
-    Double getGpa(){
-        return this.gpa;
-    }
-    int getAge(){
-        return this.age;
-    }
-    String getName(){
-        return this.name;
-    }
-    Student(String name, int age, Double gpa){
-        this.name= name;
-        this.age = age;
-        this.gpa = gpa;
-    }
-}
-
-
-
 public class StudentTest 
 {
     private static final Logger LOGGER =  Logger.getLogger("InfoLogging");
